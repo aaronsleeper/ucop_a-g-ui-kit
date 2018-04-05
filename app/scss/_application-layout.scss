@@ -1,0 +1,9 @@
+// Brand
+// Header Logo Lockup
+.brand {
+    color: $white;
+    background-color: $uc-blue;
+    > span {
+        display: block;
+    }
+}

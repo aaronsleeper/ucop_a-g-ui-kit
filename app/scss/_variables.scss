@@ -2,10 +2,9 @@
 Override Bootstrap defaults
 ------------------------------ */
 // Colors
-$primary   : $purple-700;
-$info      : $blue-500;
-$body-color: $gray-800;
-$body-bg   : $gray-50;
+$primary   : $uc-blue;
+$body-color: $gray-600;
+$body-bg   : $white;
 
 // Fonts
 $font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -30,11 +29,11 @@ $h5-font-size: $font-size-base * 1.2125;   // 19.4 pt
 $h6-font-size: $font-size-base;            // 16 pt
 
 $headings-font-weight: 700;
-$headings-color      : $gray-700;
+$headings-color      : $gray-500;
 
 $small-font-size: 85.625%;  // 13.7 pt on 1em
 
-$hr-border-color: rgba($gray-400, 0.42);
+$hr-border-color: rgba($gray-200, 0.42);
 
 $spacer: 1rem;
 
@@ -48,14 +47,14 @@ $table-cell-padding   : 1rem 1.25rem;
 $table-cell-padding-sm: 0.5rem 0.625rem;
 
 $table-bg       : transparent;
-$table-accent-bg: $gray-50;
-$table-hover-bg : $amber-100;
+$table-accent-bg: $gray-100;
+$table-hover-bg : $blue-light;
 $table-active-bg: $table-hover-bg;
 
 $table-border-color: rgba($gray-400, 0.42);
 
-$table-head-bg   : $gray-200;
-$table-head-color: $gray-700;
+$table-head-bg   : $gray-100;
+$table-head-color: $gray-500;
 
 // Focus Styles
 $input-btn-focus-width     : 0.21rem;
@@ -92,18 +91,18 @@ $border-width: 1px;
 
 // Forms
 $input-bg                : $white;
-$input-disabled-bg       : $gray-200;
-$input-color             : $gray-700;
-$input-border-color      : $gray-100;
+$input-disabled-bg       : $gray-100;
+$input-color             : $gray-600;
+$input-border-color      : $gray-200;
 $input-btn-border-width  : $border-width;                                               // For form controls and buttons
-$input-box-shadow        : inset 0 1px 1px rgba($gray-800, .075);
+$input-box-shadow        : inset 0 1px 1px rgba($gray-600, .075);
 $input-border-radius     : $border-radius;
 $input-border-radius-lg  : $border-radius-lg;
 $input-border-radius-sm  : $border-radius-sm;
 $input-focus-bg          : $input-bg;
 $input-focus-border-color: $primary;
 $input-focus-color       : $input-color;
-$input-placeholder-color : $gray-600;
+$input-placeholder-color : $gray-400;
 $input-transition        : border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
 $input-height-border: $input-btn-border-width * 2;

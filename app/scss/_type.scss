@@ -1,16 +1,26 @@
-// Import Source Sans Pro
-// Weights 300, 400, 700
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i');
+/*
+Font Face Names
+    • KievitProMedium
+    • KievitProMediumItalic
+    • KievitProBold
+    • KievitProBoldItalic
+    • KievitProBook
+    • KievitProBookItalic
+    • KievitProBlack
+    • KievitProBlackItalic
+    • KievitProExtraBold
+    • KievitProExtraBoldItalic
+*/
 
-h4, .h4, 
+h4, .h4,
 h5, .h5 {
     font-weight: 400;
 }
 h6, .h6 {
     font-weight: 300;
 }
-h4, .h4, 
-h5, .h5, 
+h4, .h4,
+h5, .h5,
 h6, .h6 {
     color: $gray-800;
 }
@@ -20,11 +30,11 @@ h2, .h2 { small, .small { font-size: $h3-font-size; } }
 h3, .h3 { small, .small { font-size: $h4-font-size; } }
 h4, .h4 { small, .small { font-size: $h5-font-size; } }
 h5, .h5 { small, .small { font-size: $h6-font-size; } }
-h1, .h1, 
-h2, .h2, 
-h3, .h3, 
-h4, .h4, 
-h5, .h5, 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
 h6, .h6 { small, .small { font-weight: 300; color: $gray-500; } }
 
 label {
