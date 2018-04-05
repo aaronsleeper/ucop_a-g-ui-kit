@@ -1,0 +1,40 @@
+// Transitions
+// Properties
+@mixin transition-property($properties...) {
+    -webkit-transition-property: $properties;
+    -moz-transition-property: $properties;
+    -o-transition-property: $properties;
+    transition-property: $properties;
+    // include the properties in a will-change so the graphics card can handle this
+    will-change: $properties;
+}
+// Duration
+@mixin transition-duration($duration) {
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    transition-duration: $duration;
+}
+// Easing Functions
+@mixin transition-easing($curve) {
+    -webkit-transition-timing-function: $curve;
+    -moz-transition-timing-function: $curve;
+    -o-transition-timing-function: $curve;
+    transition-timing-function: $curve;
+}
+// Delay
+@mixin transition-delay($delay) {
+    -webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+// Filters
+@mixin filter($filter-type, $filter-amount) {
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}

@@ -1,0 +1,109 @@
+// Set cursor for button element
+button:hover {
+    cursor: pointer;
+}
+
+// Turn off border colors
+.btn {
+    &.btn-primary,
+    &.btn-default {
+        border-color: transparent;
+    }
+}
+
+// Buttons with icons
+// Icons should always appear before text in a button
+.btn {
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+    svg[class*="icon-"] {
+        @include transition-property(height);
+        @include transition-duration($duration-exit);
+        @include transition-easing($easing-decel);
+        transform-origin: 50% 50%;
+    }
+    &:hover,
+    &:focus {
+        svg[class*="icon-"] {
+            height: 1em;
+            @include transition-duration($duration-entry);
+            @include transition-easing($easing-accel);
+        }
+    }
+}
+.btn-sm {
+    border-radius: $border-radius;
+}
+.img-btn {
+    padding: 0;
+}
+p .btn {
+    display: inline;
+    padding: 0.15em 0.5em;
+}
+
+// Off-screen content buttons
+.selection-hidden {
+    position       : absolute;
+    top            : -100%;
+    left           : 0;
+    display        : flex;
+    width          : 100%;
+    justify-content: center;
+    opacity        : 0;
+    z-index        : $z-index-selection-hidden;
+    @include transition-property(opacity);
+    @include transition-duration($duration-exit);
+    @include transition-easing($easing-decel);
+    a {
+        @extend .btn, .btn-primary;
+        font-size      : $font-size-sm;
+        font-weight    : 300;
+        justify-content: center;
+        border-radius  : $border-radius-lg;
+        strong {
+            @extend .ml-1;
+            font-weight: 700;
+        }
+    }
+    &.above,
+    &.below {
+        opacity: 1;
+        @include transition-duration($duration-entry);
+        @include transition-easing($easing-accel);
+    }
+    // Top button
+    // shows when there is content off-screen above the current position
+    &.above {
+        top             : 0;
+        bottom          : auto;
+        background-image: linear-gradient(180deg, rgba($gray-500, 0.21), rgba($gray-500, 0) 8px);
+        a {
+            border-top-right-radius: 0;
+            border-top-left-radius : 0;
+        }
+    }
+    // Bottom button
+    // shows when there is content off-screen below the current position
+    &.below {
+        top             : auto;
+        bottom          : 0;
+        background-image: linear-gradient(0deg, rgba($gray-500, 0.21), rgba($gray-500, 0) 8px);
+        a {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius : 0;
+        }
+    }
+}
+
+// Help button
+.btn-help {
+    @extend .mt-2;
+    display: inline-block;
+    color  : $gray-800;
+    &:hover {
+        text-decoration: none;
+        background     : rgba($white, 0.42);
+    }
+}
