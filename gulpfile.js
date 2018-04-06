@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var multiDest = require('gulp-multi-dest');
+var multiDest = require('gulp-multi-dest'); 
 var browserSync = require('browser-sync').create();
+var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var clean = require('gulp-clean');
 
 // destOption - required var for multiDest
 // https://www.npmjs.com/package/gulp-multi-dest
@@ -74,3 +76,28 @@ gulp.task('pack-js', function () {
 });
 
 gulp.task('default', ['serve']);
+
+// Delete the dist directory
+gulp.task('clean', function() {
+    return gulp.src('dist')
+        .pipe(clean());
+});
+
+// dist js.  TODO: minify
+gulp.task('dist-js', ['clean', 'pack-js'], function () {
+    return gulp
+      .src("app/js/app.js")
+      .pipe(rename('ucop_a-g-ui-kit.js'))
+      .pipe(multiDest(["dist"]))
+});
+
+// dist css.  TODO: minify
+gulp.task('dist-css', ['clean', 'sass'], function() {
+    return (gulp
+        .src("app/css/app.css")
+        .pipe(rename('ucop_a-g-ui-kit.css'))
+        .pipe(multiDest(["dist"]))
+    );
+});
+
+gulp.task('build', ['dist-css', 'dist-js']);
