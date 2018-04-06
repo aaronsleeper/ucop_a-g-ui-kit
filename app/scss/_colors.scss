@@ -34,3 +34,38 @@ $gray-300:      #A7A9AC;
 $gray-200:      #D1D2D4;
 $gray-100:      #F3F3F4;
 $white:         #FFFFFF;
+
+$ucop-colors: () !default;
+$ucop-colors: map-merge((
+    "uc-blue":          $uc-blue,
+    "uc-gold":          $uc-gold,
+    "blue-dark":        $blue-dark,
+    "blue-light":       $blue-light,
+    "gold-light":       $gold-light,
+    "gold-lighter":     $gold-lighter,
+    "orange":           $orange,
+    "orange-light":     $orange-light,
+    "pink":             $pink,
+    "pink-light":       $pink-light,
+    "teal":             $teal,
+    "teal-light":       $teal-light,
+    "uc-gray":          $uc-gray,
+    "gray-warm-8":      $gray-warm-8,
+    "gray-warm-3":      $gray-warm-3,
+    "gray-warm-1":      $gray-warm-1,
+    "gold-metallic":    $gold-metallic,
+    "black":            $black,
+    "gray-600":         $gray-600,
+    "gray-500":         $gray-500,
+    "gray-400":         $gray-400,
+    "gray-300":         $gray-300,
+    "gray-200":         $gray-200,
+    "gray-100":         $gray-100,
+    "white":            $white
+), $ucop-colors);
+
+:root {
+    @each $color, $value in $ucop-colors {
+        --#{$color}: #{$value};
+    }
+}

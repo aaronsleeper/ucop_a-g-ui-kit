@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
+    <!-- SVG Defs -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="defs-only">
+        <symbol viewBox="0 0 20 20" id="icon-check-circle">
+            <g fill="none" fill-rule="evenodd">
+                <path d="M-2-2h24v24H-2z" />
+                <path fill="var(--gold-light)" fill-rule="nonzero" d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zM8 15l-5-5 1.41-1.41L8 12.17l7.59-7.59L17 6l-9 9z" />
+            </g>
+        </symbol>
+    </svg>
 
     <!-- Start Main Page Layout -->
+    <!-- Search Widget -->
     <div class="search-widget">
         <div class="brand">
             <span class="title">A-G Course List</span>
@@ -26,15 +36,17 @@
                     <label id="search-input-label" for="search-input" class="sr-only">Search for courses or institutions</label>
                     <input type="text" class="form-control" id="search-input" aria-describedby="search-input-label" placeholder="Start typing">
                 </div>
-                <div class="form-check check-courses">
+                <div class="form-check svg-check check-courses">
                     <input class="form-check-input" type="checkbox" value="" id="search-check-courses">
                     <label class="form-check-label" for="search-check-courses">
+                        <svg viewBox="0 0 20 20" class="icon-check-circle"><use xlink:href="#icon-check-circle" /></svg>
                         Courses
                     </label>
                 </div>
-                <div class="form-check check-institutions">
+                <div class="form-check svg-check check-institutions">
                     <input class="form-check-input" type="checkbox" value="" id="search-check-institutions">
                     <label class="form-check-label" for="search-check-institutions">
+                        <svg viewBox="0 0 20 20" class="icon-check-circle"><use xlink:href="#icon-check-circle" /></svg>
                         Institutions
                     </label>
                 </div>

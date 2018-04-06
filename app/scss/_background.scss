@@ -5,32 +5,32 @@ body {
     &:before,
     &:after {
         content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
+        position: absolute;
+		top: var(--rtop);
+		left: var(--rleft);
         display: block;
         width: var(--rw);
         height: var(--rh);
         background-color: transparent;
         background-repeat: repeat;
         background-size: auto;
-        transform: rotate(45deg) translateX(-50%) translateY(-10%);
-        transform-origin: 0 0;
+        transform: rotate(var(--rot));
+        transform-origin: center;
         z-index: 0;
     }
     &:before {
         // thin lines
         background-image: url("../img/bg-gradient-line.svg");
-        background-size: 11px 100%;
+        // background-size: 11px 100%;
     }
     &:after {
         // thick lines
         background-image: url("../img/bg-rectangles.svg");
-        background-size: 1066px auto;
+        // background-size: 1066px auto;
     }
     // pull the immediate children up above the background layering
     > * {
-        position: relative;
+        //position: relative;
         z-index: $z-index-body-immediate-children;
     }
 }

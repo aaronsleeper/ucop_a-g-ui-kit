@@ -22,6 +22,7 @@
         grid-template-areas:    "lead lead lead"
                                 "input input input"
                                 "courses institutions advanced";
+        padding: ($spacer * 2) ($spacer * 1.5);
     }
 
     // position the items
@@ -32,8 +33,20 @@
     .toggle-advanced-filters    { grid-area: advanced }
     .submit-search              { grid-area: input; }
 
+    .input-lead {
+        @extend h5;
+        color: $white;
+    }
     .search-input {
         margin-bottom: 0;
+    }
+    .check-courses,
+    .check-institutions {
+        label {
+            &:hover {
+                --gold-light: var(--gold-lighter);
+            }
+        }
     }
     .submit-search {
         width: min-content;
@@ -46,3 +59,4 @@
         top: 100%;
     }
 }
+
