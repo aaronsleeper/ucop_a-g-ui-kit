@@ -1,0 +1,48 @@
+// Search Widget
+.search-widget {
+    position: relative;
+    top: 30vh;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    background-color: $uc-blue;
+    @include transition-property(top);
+    @include transition-duration($duration-exit);
+    @include transition-easing($easing-decel);
+    // State: Pin to top
+    &.pinned {
+        top: 0;
+    }
+
+    // layout the form's grid
+    .search > form {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:    "lead lead lead"
+                                "input input input"
+                                "courses institutions advanced";
+    }
+
+    // position the items
+    .input-lead                 { grid-area: lead }
+    .search-input               { grid-area: input }
+    .check-courses              { grid-area: courses }
+    .check-institutions         { grid-area: institutions }
+    .toggle-advanced-filters    { grid-area: advanced }
+    .submit-search              { grid-area: input; }
+
+    .search-input {
+        margin-bottom: 0;
+    }
+    .submit-search {
+        width: min-content;
+        align-self: center;
+        justify-self: right;
+    }
+
+    #search-advanced-filters {
+        position: absolute;
+        top: 100%;
+    }
+}

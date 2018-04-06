@@ -5474,30 +5474,65 @@ p .btn {
   display: inline;
   padding: 0.15em 0.5em; }
 
-html body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  overflow: hidden; }
-
 .search-widget {
   position: relative;
+  top: 30vh;
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  background-color: #1295D8;
   -webkit-transition-property: top;
   transition-property: top;
   will-change: top;
   -webkit-transition-duration: 0.195s;
   transition-duration: 0.195s;
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  background-color: #1295D8;
-  top: 30vh; }
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
   .search-widget.pinned {
     top: 0; }
+  .search-widget .search > form {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "lead lead lead" "input input input" "courses institutions advanced"; }
+  .search-widget .input-lead {
+    grid-area: lead; }
+  .search-widget .search-input {
+    grid-area: input; }
+  .search-widget .check-courses {
+    grid-area: courses; }
+  .search-widget .check-institutions {
+    grid-area: institutions; }
+  .search-widget .toggle-advanced-filters {
+    grid-area: advanced; }
+  .search-widget .submit-search {
+    grid-area: input; }
+  .search-widget .search-input {
+    margin-bottom: 0; }
+  .search-widget .submit-search {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: right; }
+  .search-widget #search-advanced-filters {
+    position: absolute;
+    top: 100%; }
+
+html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .brand {
   background-color: rgba(114, 205, 244, 0.21);
@@ -5515,20 +5550,22 @@ body {
     top: 0;
     left: 0;
     display: block;
-    width: 200vw;
-    height: 200vh;
+    width: var(--rw);
+    height: var(--rh);
     background-color: transparent;
     background-repeat: repeat;
     background-size: auto;
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) translateX(-50%) translateY(-10%);
+    transform: rotate(45deg) translateX(-50%) translateY(-10%);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
     z-index: 0; }
   body:before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' viewBox='0 0 11 1080'%3E%3ClinearGradient id='SVGID_1_' x2='0' y1='1079.959' y2='1079' gradientTransform='matrix%281 0 0 -1080 1.5 1166400%29' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23fff'/%3E%3C/linearGradient%3E%3Cpath fill='url%28%23SVGID_1_%29' d='M1 0h1v1080H1z'/%3E%3C/svg%3E"); }
+    background-image: url("../img/bg-gradient-line.svg");
+    background-size: 11px 100%; }
   body:after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1066' height='311'%3E%3Cg fill='%23FFF' fill-rule='evenodd'%3E%3Cpath d='M390 0h260v311H390z' opacity='.11'/%3E%3Cpath d='M780 0h260v311H780z' opacity='.42'/%3E%3Cpath d='M0 0h260v311H0z' opacity='.21'/%3E%3C/g%3E%3C/svg%3E%0A"); }
+    background-image: url("../img/bg-rectangles.svg");
+    background-size: 1066px auto; }
   body > * {
     position: relative;
     z-index: 1; }

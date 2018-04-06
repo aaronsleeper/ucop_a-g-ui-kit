@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 11 2000">
+  <style>
+    .st0{fill:none}
+  </style>
+  <path d="M0 0h11v2000H0z" class="st0"/>
+  <path d="M-1 0h11v2000H-1z" class="st0"/>
+  <linearGradient id="SVGID_1_" x1=".499" x2=".499" y1="2000" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <path fill="url(#SVGID_1_)" d="M0 0h1v2000H0z"/>
+</svg>

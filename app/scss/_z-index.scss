@@ -7,3 +7,5 @@ try setting scope with position: relative; first
 -AS
 ------------------------------ */
 
+// set the z-index so everything stays above the background gradient
+$z-index-body-immediate-children: 1;

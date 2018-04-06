@@ -3,23 +3,8 @@ html body {
     display: flex;
     width: 100vw;
     min-height: 100vh;
+    align-items: flex-start;
     justify-content: center;
-    overflow: hidden;
-}
-
-// Search Widget
-.search-widget {
-    position: relative;
-    @include transition-property(top);
-    @include transition-duration($duration-exit);
-    @include transition-easing($easing-decel);
-    background-color: $uc-blue;
-    // State: Centered
-    top: 30vh;
-    // State: Pin to top
-    &.pinned {
-        top: 0;
-    }
 }
 
 // Brand

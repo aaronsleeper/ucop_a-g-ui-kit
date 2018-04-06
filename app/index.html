@@ -20,19 +20,19 @@
             </span>
         </div>
         <div class="search">
-            <span class="input-lead">What can we help you find?</span>
             <form>
-                <div class="form-group">
+                <span class="input-lead">What can we help you find?</span>
+                <div class="form-group search-input">
                     <label id="search-input-label" for="search-input" class="sr-only">Search for courses or institutions</label>
                     <input type="text" class="form-control" id="search-input" aria-describedby="search-input-label" placeholder="Start typing">
                 </div>
-                <div class="form-check">
+                <div class="form-check check-courses">
                     <input class="form-check-input" type="checkbox" value="" id="search-check-courses">
                     <label class="form-check-label" for="search-check-courses">
                         Courses
                     </label>
                 </div>
-                <div class="form-check">
+                <div class="form-check check-institutions">
                     <input class="form-check-input" type="checkbox" value="" id="search-check-institutions">
                     <label class="form-check-label" for="search-check-institutions">
                         Institutions
@@ -43,17 +43,17 @@
                         Link with href
                     </a>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="collapse" id="search-advanced-filters">
+                    <div class="filter-list">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary submit-search">Submit</button>
             </form>
         </div>
     </div>
 
-    <div class="collapse" id="search-advanced-filters">
-        <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-    </div>
 
     <!-- Vendor Scripts -->
     <script src="js/vendor.js" type="text/javascript"></script>
