@@ -1,42 +1,33 @@
 /*
-Font Face Names
-    • KievitProMedium
-    • KievitProMediumItalic
-    • KievitProBold
-    • KievitProBoldItalic
-    • KievitProBook
-    • KievitProBookItalic
-    • KievitProBlack
-    • KievitProBlackItalic
-    • KievitProExtraBold
-    • KievitProExtraBoldItalic
+Font Face Usage
+    %f400   • KievitProMedium
+    italic  • KievitProMediumItalic
+    strong  • KievitProBold
+
+    %f500   • KievitProBold
+    italic  • KievitProBoldItalic
+    strong  • KievitProBook
+
+    %f700   • KievitProBook
+    italic  • KievitProBookItalic
+    strong  • KievitProBlack
+
+    %f800   • KievitProBlack
+    italic  • KievitProBlackItalic
+    strong  • KievitProExtraBold
+
+    %f900   • KievitProExtraBold
+    italic  • KievitProExtraBoldItalic
 */
 
-h4, .h4,
-h5, .h5 {
-    font-weight: 400;
-}
-h6, .h6 {
-    font-weight: 300;
-}
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-    color: $gray-800;
-}
-
-h1, .h1 { small, .small { font-size: $h2-font-size; } }
-h2, .h2 { small, .small { font-size: $h3-font-size; } }
-h3, .h3 { small, .small { font-size: $h4-font-size; } }
-h4, .h4 { small, .small { font-size: $h5-font-size; } }
-h5, .h5 { small, .small { font-size: $h6-font-size; } }
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 { small, .small { font-weight: 300; color: $gray-500; } }
-
-label {
-    font-weight: 300;
+h6, .h6 {
+    @extend %f800;
+    small, .small {
+        font-size: 0.8em;
+    }
 }

@@ -1,85 +1,129 @@
 /****************************************
-    Fonts
+    Import Fonts
 *****************************************/
 
 @font-face {
     font-family: "KievitProMedium";
-    src: url(./fonts/KievitWebPro-Medi.eot);
-    src: url(./fonts/KievitWebPro-Medi.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-Medi.woff) format('woff');
-    font-weight: normal;
+    src: url(/fonts/KievitWebPro-Medi.eot);
+    src: url(/fonts/KievitWebPro-Medi.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-Medi.woff) format('woff');
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "KievitProMediumItalic";
-    src: url(./fonts/KievitWebPro-MediIta.eot);
-    src: url(./fonts/KievitWebPro-MediIta.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-MediIta.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url(/fonts/KievitWebPro-MediIta.eot);
+    src: url(/fonts/KievitWebPro-MediIta.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-MediIta.woff) format('woff');
+    font-weight: 400;
+    font-style: italic;
 }
 
 @font-face {
     font-family: "KievitProBold";
-    src: url(./fonts/KievitWebPro-Bold.eot);
-    src: url(./fonts/KievitWebPro-Bold.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-Bold.woff) format('woff');
-    font-weight: normal;
+    src: url(/fonts/KievitWebPro-Bold.eot);
+    src: url(/fonts/KievitWebPro-Bold.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-Bold.woff) format('woff');
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "KievitProBoldItalic";
-    src: url(./fonts/KievitWebPro-BoldIta.woff);
-    src: url(./fonts/KievitWebPro-BoldIta.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-BoldIta.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url(/fonts/KievitWebPro-BoldIta.woff);
+    src: url(/fonts/KievitWebPro-BoldIta.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-BoldIta.woff) format('woff');
+    font-weight: 700;
+    font-style: italic;
 }
 
 @font-face {
     font-family: "KievitProBook";
-    src: url(./fonts/KievitWebPro-Book.eot);
-    src: url(./fonts/KievitWebPro-Book.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-Book.woff) format('woff');
-    font-weight: normal;
+    src: url(/fonts/KievitWebPro-Book.eot);
+    src: url(/fonts/KievitWebPro-Book.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-Book.woff) format('woff');
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "KievitProBookItalic";
-    src: url(./fonts/KievitWebPro-BookIta.eot);
-    src: url(./fonts/KievitWebPro-BookIta.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-BookIta.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url(/fonts/KievitWebPro-BookIta.eot);
+    src: url(/fonts/KievitWebPro-BookIta.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-BookIta.woff) format('woff');
+    font-weight: 500;
+    font-style: italic;
 }
 
 @font-face {
     font-family: "KievitProBlack";
-    src: url(./fonts/KievitWebPro-Black.eot);
-    src: url(./fonts/KievitWebPro-Black.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-Black.woff) format('woff');
-    font-weight: normal;
+    src: url(/fonts/KievitWebPro-Black.eot);
+    src: url(/fonts/KievitWebPro-Black.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-Black.woff) format('woff');
+    font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "KievitProBlackItalic";
-    src: url(./fonts/KievitWebPro-BlackIta.eot);
-    src: url(./fonts/KievitWebPro-BlackIta.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-BlackIta.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url(/fonts/KievitWebPro-BlackIta.eot);
+    src: url(/fonts/KievitWebPro-BlackIta.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-BlackIta.woff) format('woff');
+    font-weight: 900;
+    font-style: italic;
 }
 
 @font-face {
     font-family: "KievitProExtraBold";
-    src: url(./fonts/KievitWebPro-Xbold.eot);
-    src: url(./fonts/KievitWebPro-Xbold.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-Xbold.woff) format('woff');
-    font-weight: normal;
+    src: url(/fonts/KievitWebPro-Xbold.eot);
+    src: url(/fonts/KievitWebPro-Xbold.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-Xbold.woff) format('woff');
+    font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "KievitProExtraBoldItalic";
-    src: url(./fonts/KievitWebPro-XboldIta.eot);
-    src: url(./fonts/KievitWebPro-XboldIta.eot?#iefix) format('embedded-opentype'), url(./fonts/KievitWebPro-XboldIta.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url(/fonts/KievitWebPro-XboldIta.eot);
+    src: url(/fonts/KievitWebPro-XboldIta.eot?#iefix) format('embedded-opentype'), url(/fonts/KievitWebPro-XboldIta.woff) format('woff');
+    font-weight: 800;
+    font-style: italic;
 }
 
-/* Fonts: end */
+/****************************************
+    Utilize Fonts
+*****************************************/
+%f400 {
+    font-family:"KievitProBook";
+    em {
+        font-family: "KievitProBookItalic";
+    }
+    strong {
+        font-family: "KievitProMedium";
+    }
+}
+%f500 {
+    font-family:"KievitProMedium";
+    em {
+        font-family: "KievitProMediumItalic";
+    }
+    strong {
+        font-family: "KievitProBold";
+    }
+}
+%f700 {
+    font-family:"KievitProBold";
+    em {
+        font-family: "KievitProBoldItalic";
+    }
+    strong {
+        font-family: "KievitProExtraBold";
+    }
+}
+%f800 {
+    font-family:"KievitProExtraBold";
+    em {
+        font-family: "KievitProExtraBoldItalic";
+    }
+    strong {
+        font-family: "KievitProBlack";
+    }
+}
+%f900 {
+    font-family:"KievitProBlack";
+    em {
+        font-family: "KievitProBlackItalic";
+    }
+}
