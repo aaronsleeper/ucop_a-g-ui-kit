@@ -37,11 +37,11 @@ var angleOfRotation = .785;
 
 function sizeBackground() {
     var rot = Math.round(180.0 * angleOfRotation / 3.1416);
-    
+
     // get the viewport dimensions
     var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    
+
     // calculate the size of our rectangle
     var rw = (vh*Math.sin(angleOfRotation)) + (vw*Math.cos(angleOfRotation));
     var rh = (vw*Math.sin(angleOfRotation)) + (vh*Math.cos(angleOfRotation));

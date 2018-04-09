@@ -88,7 +88,7 @@ gulp.task('dist-js', ['clean', 'pack-js'], function () {
     return gulp
       .src("app/js/app.js")
       .pipe(rename('ucop_a-g-ui-kit.js'))
-      .pipe(multiDest(["dist"]))
+      .pipe(multiDest(["dist/js"]))
 });
 
 // dist css.  TODO: minify
@@ -96,8 +96,16 @@ gulp.task('dist-css', ['clean', 'sass'], function() {
     return (gulp
         .src("app/css/app.css")
         .pipe(rename('ucop_a-g-ui-kit.css'))
-        .pipe(multiDest(["dist"]))
+        .pipe(multiDest(["dist/css"]))
     );
 });
 
-gulp.task('build', ['dist-css', 'dist-js']);
+// dist svg.  TODO: minify?
+gulp.task('dist-svg', ['clean'], function() {
+    return (gulp
+        .src("app/img/*")
+        .pipe(multiDest(["dist/img"]))
+    );
+});
+
+gulp.task('build', ['dist-css', 'dist-js', 'dist-svg']);
