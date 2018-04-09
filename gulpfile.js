@@ -84,11 +84,11 @@ gulp.task('clean', function() {
 });
 
 // dist js.  TODO: minify
-gulp.task('dist-js', ['clean', 'pack-js'], function () {
+gulp.task('dist-js', ['clean', 'pack-js', 'pack-vendor-js'], function () {
     return gulp
-      .src("app/js/app.js")
-      .pipe(rename('ucop_a-g-ui-kit.js'))
-      .pipe(multiDest(["dist/js"]))
+      .src(['app/js/vendor.js', 'app/js/app.js'])
+      .pipe(concat('ucop_a-g-ui-kit.js'))
+      .pipe(multiDest(['dist/js']))
 });
 
 // dist css.  TODO: minify
