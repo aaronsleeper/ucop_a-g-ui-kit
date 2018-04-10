@@ -1,27 +1,31 @@
 .svg-check {
-    input[type="checkbox"] {
-        display: none;
-        &:checked + label {
-            background-color: rgba($blue-dark, 0.42);
-        }
-    }
-    label {
-        display: grid;
-        grid-gap: $spacer / 2;
-        grid-template-columns: repeat(2, max-content);
-        align-items: middle;
-        cursor: pointer;
-        padding: $input-btn-padding-y $input-btn-padding-x;
-        line-height: $input-btn-line-height;
-        @include transition-property(background-color, var(--gold-light));
-        @include transition-duration($duration-exit);
-        @include transition-easing($easing-decel);
-        svg {
-            width: 1.5em;
-        }
-        &:hover {
-            @include transition-duration($duration-entry);
-            @include transition-easing($easing-accel);
-        }
-    }
+	label {
+		display: grid;
+		grid-gap: $spacer / 2;
+		grid-template-columns: repeat(2, max-content);
+		align-items: middle;
+		cursor: pointer;
+		padding: $input-btn-padding-y $input-btn-padding-x;
+		line-height: $input-btn-line-height;
+		@include transition-property(background-color, var(--gold-light));
+		@include transition-duration($duration-exit);
+		@include transition-easing($easing-decel);
+		svg {
+			width: 1.5em;
+			opacity: 1;
+		}
+		&:hover {
+			@include transition-duration($duration-entry);
+			@include transition-easing($easing-accel);
+		}
+	}
+	input[type="checkbox"] {
+		display: none;
+		&:checked + label {
+			svg {
+				opacity: 0.21;
+				--gold-light: var(--blue-dark);
+			}
+		}
+	}
 }

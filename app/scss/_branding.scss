@@ -1,0 +1,36 @@
+// Brand
+// Header Logo Lockup
+.brand {
+	display: grid;
+	grid-gap: $spacer / 2;
+	grid-template-rows: repeat(3, min-content);
+	padding: ($pane-padding-y * 0.5) ($pane-padding-x * 0.75);
+	@extend %f400;
+	background-color: rgba($blue-light, 0.21);
+	color: $white;
+	.title {
+		@extend %f800;
+		font-size: $font-size-base * 2;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 0.21em;
+		white-space: nowrap;
+	}
+	.credit {
+		font-size: $font-size-sm;
+		color: rgba($white, 0.84);
+	}
+}
+
+.partner-logos {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(2, min-content);
+	align-items: center;
+	[src*='uc.svg'] {
+		width: 5.125rem;
+	}
+	[src*='csu.svg'] {
+		width: 8.125rem;
+	}
+}

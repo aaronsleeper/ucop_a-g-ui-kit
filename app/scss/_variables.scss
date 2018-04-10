@@ -2,112 +2,122 @@
 Override Bootstrap defaults
 ------------------------------ */
 // Colors
-$primary   : $uc-blue;
+$primary: $uc-blue;
 $body-color: $gray-600;
-$body-bg   : $white;
+$body-bg: $white;
 
 // Fonts
-$font-family-sans-serif: 'KievitProBook', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif: 'KievitProBook', -apple-system, BlinkMacSystemFont,
+	"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$font-size-base: 1rem;                      // Assumes the browser default, typically `16px`
-$font-size-lg  : ($font-size-base * 1.25);
-$font-size-sm  : ($font-size-base * .875);
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * .875);
 
 $line-height-base: 1.42;
-$line-height-lg  : 1.84;
-$line-height-sm  : 1.21;
+$line-height-lg: 1.84;
+$line-height-sm: 1.21;
 
-$font-weight-light : 300;
+$font-weight-light: 300;
 $font-weight-normal: 400;
-$font-weight-bold  : 700;
+$font-weight-bold: 700;
 
-$h1-font-size: $font-size-base * 4.06875;  // 65.1 pt
-$h2-font-size: $font-size-base * 2.8625;   // 45.8 pt
-$h3-font-size: $font-size-base * 2.01875;  // 32.3 pt
-$h4-font-size: $font-size-base * 1.41875;  // 22.7 pt
-$h5-font-size: $font-size-base * 1.2125;   // 19.4 pt
-$h6-font-size: $font-size-base;            // 16 pt
+$h1-font-size: $font-size-base * 4.06875; // 65.1 pt
+$h2-font-size: $font-size-base * 2.8625; // 45.8 pt
+$h3-font-size: $font-size-base * 2.01875; // 32.3 pt
+$h4-font-size: $font-size-base * 1.41875; // 22.7 pt
+$h5-font-size: $font-size-base * 1.2125; // 19.4 pt
+$h6-font-size: $font-size-base; // 16 pt
 
 $headings-font-weight: 700;
-$headings-color      : $gray-500;
+$headings-color: $gray-500;
 
-$small-font-size: 85.625%;  // 13.7 pt on 1em
+$small-font-size: 85.625%; // 13.7 pt on 1em
 
 $hr-border-color: rgba($gray-200, 0.42);
 
 $spacer: 1rem;
 
 // Border Radius
-$border-radius   : .125rem;
+$border-radius: .125rem;
 $border-radius-lg: .25rem;
 $border-radius-sm: .063rem;
 
 // Tables
-$table-cell-padding   : 1rem 1.25rem;
+$table-cell-padding: 1rem 1.25rem;
 $table-cell-padding-sm: 0.5rem 0.625rem;
 
-$table-bg       : transparent;
+$table-bg: transparent;
 $table-accent-bg: $gray-100;
-$table-hover-bg : $blue-light;
+$table-hover-bg: $blue-light;
 $table-active-bg: $table-hover-bg;
 
 $table-border-color: rgba($gray-400, 0.42);
 
-$table-head-bg   : $gray-100;
+$table-head-bg: $gray-100;
 $table-head-color: $gray-500;
 
 // Focus Styles
-$input-btn-focus-width     : 0.21rem;
-$input-btn-focus-color     : rgba($primary, .21);
+$input-btn-focus-width: 0.21rem;
+$input-btn-focus-color: rgba($primary, .21);
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
 // Tooltips
-$tooltip-color    : $white;
-$tooltip-bg       : $primary;
+$tooltip-color: $white;
+$tooltip-bg: $primary;
 $tooltip-padding-y: 0.25em;
 $tooltip-padding-x: 0.5em;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-focus-width: .4rem;
+$input-btn-focus-color: rgba($uc-gold, .42);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
 // Buttons
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$input-btn-padding-y  : .75rem;
-$input-btn-padding-x  : 1rem;
+$input-btn-padding-y: .75rem;
+$input-btn-padding-x: 1rem;
 $input-btn-line-height: $line-height-base;
 
-$input-btn-focus-width     : .2rem;
-$input-btn-focus-color     : rgba($primary, .21);
+$input-btn-focus-width: .2rem;
+$input-btn-focus-color: rgba($primary, .21);
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
-$input-btn-padding-y-sm  : .375rem;
-$input-btn-padding-x-sm  : .5rem;
+$input-btn-padding-y-sm: .375rem;
+$input-btn-padding-x-sm: .5rem;
 $input-btn-line-height-sm: $line-height-sm;
 
-$input-btn-padding-y-lg  : 1.125rem;
-$input-btn-padding-x-lg  : 1.5rem;
+$input-btn-padding-y-lg: 1.125rem;
+$input-btn-padding-x-lg: 1.5rem;
 $input-btn-line-height-lg: $line-height-lg;
 
 $border-width: 1px;
 
 // Forms
-$input-bg                : $white;
-$input-disabled-bg       : $gray-100;
-$input-color             : $gray-600;
-$input-border-color      : $gray-200;
-$input-btn-border-width  : $border-width;                                               // For form controls and buttons
-$input-box-shadow        : inset 0 1px 1px rgba($gray-600, .075);
-$input-border-radius     : $border-radius;
-$input-border-radius-lg  : $border-radius-lg;
-$input-border-radius-sm  : $border-radius-sm;
-$input-focus-bg          : $input-bg;
+$input-bg: $white;
+$input-disabled-bg: $gray-100;
+$input-color: $gray-600;
+$input-border-color: $gray-200;
+$input-btn-border-width: $border-width; // For form controls and buttons
+$input-box-shadow: inset 0 1px 1px rgba($gray-600, .075);
+$input-border-radius: $border-radius;
+$input-border-radius-lg: $border-radius-lg;
+$input-border-radius-sm: $border-radius-sm;
+$input-focus-bg: $input-bg;
 $input-focus-border-color: $primary;
-$input-focus-color       : $input-color;
-$input-placeholder-color : $gray-400;
-$input-transition        : border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+$input-focus-color: $input-color;
+$input-placeholder-color: $gray-400;
+$input-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
 $input-height-border: $input-btn-border-width * 2;
-$input-height-inner : ($font-size-base + ($input-btn-padding-y * 2));
-$input-height       : calc(#{$input-height-inner} + #{$input-height-border});
+$input-height-inner: ($font-size-base + ($input-btn-padding-y * 2));
+$input-height: calc(#{$input-height-inner} + #{$input-height-border});
 
 /* ------------------------------
 Initialize Custom Variables
@@ -116,18 +126,18 @@ Initialize Custom Variables
 // Transition Durations
 // Entry
 $duration-entry-short: 0.149s;
-$duration-entry      : 0.225s;
-$duration-entry-long : 0.375s;
+$duration-entry: 0.225s;
+$duration-entry-long: 0.375s;
 // Exit
 $duration-exit-short: 0.129s;
-$duration-exit      : 0.195s;
-$duration-exit-long : 0.324s;
+$duration-exit: 0.195s;
+$duration-exit-long: 0.324s;
 
 // Easing Curves
 $easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
-$easing-decel   : cubic-bezier(0.0, 0.0, 0.2, 1);
-$easing-accel   : cubic-bezier(0.4, 0.0, 1, 1);
-$easing-sharp   : cubic-bezier(0.4, 0.0, 0.6, 1);
+$easing-decel: cubic-bezier(0.0, 0.0, 0.2, 1);
+$easing-accel: cubic-bezier(0.4, 0.0, 1, 1);
+$easing-sharp: cubic-bezier(0.4, 0.0, 0.6, 1);
 
 // Panes
 $pane-padding-x: $spacer * 2;

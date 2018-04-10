@@ -1,63 +1,100 @@
 // Search Widget
 .search-widget {
-    position: relative;
-    top: 30vh;
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    background-color: $uc-blue;
-    @include transition-property(top);
-    @include transition-duration($duration-exit);
-    @include transition-easing($easing-decel);
-    // State: Pin to top
-    &.pinned {
-        top: 0;
-    }
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	background-color: $uc-blue;
+	@include transition-property(top);
+	@include transition-duration($duration-exit);
+	@include transition-easing($easing-decel);
 
-    // layout the form's grid
-    .search > form {
-        position: relative;
-        display: grid;
-        grid-template-rows: repeat(3, min-content);
-        grid-template-columns: repeat(3, min-content);
-        grid-template-areas:    "lead lead lead"
-                                "input input input"
-                                "courses institutions advanced";
-        padding: 0 ($spacer * 1.5);
-    }
+	// layout the form's grid
+	.search > form {
+		position: relative;
+		display: grid;
+		grid-gap: $spacer / 2;
+		grid-template-rows: repeat(2, min-content), 1fr;
+		grid-template-columns: repeat(3, min-content);
+		align-content: space-between;
+		grid-template-areas: "lead lead lead" "input input input"
+			"courses institutions advanced";
+		padding: 0 ($pane-padding-x * 0.75);
+	}
 
-    // position the items
-    .input-lead                 { grid-area: lead }
-    .search-input               { grid-area: input }
-    .check-courses              { grid-area: courses }
-    .check-institutions         { grid-area: institutions }
-    .toggle-advanced-filters    { grid-area: advanced }
-    .submit-search              { grid-area: input; }
+	// position the items
+	.input-lead {
+		grid-area: lead;
+	}
+	.search-input {
+		grid-area: input;
+	}
+	.check-courses {
+		grid-area: courses;
+	}
+	.check-institutions {
+		grid-area: institutions;
+	}
+	.toggle-advanced-filters {
+		grid-area: advanced;
+	}
+	.submit-search {
+		grid-area: input;
+	}
 
-    .input-lead {
-        @extend h5;
-        color: $white;
-    }
-    .search-input {
-        margin-bottom: 0;
-    }
-    .check-courses,
-    .check-institutions {
-        label {
-            color: $white;
-            &:hover {
-                background-color: rgba($blue-dark, 0.42);
-            }
-        }
-    }
-    .submit-search {
-        width: min-content;
-        align-self: center;
-        justify-self: right;
-    }
-
-    #search-advanced-filters {
-        position: absolute;
-        top: 100%;
-    }
+	.input-lead {
+		@extend h5;
+		color: $white;
+		padding-top: ($pane-padding-y * 0.5);
+	}
+	.search-input {
+		margin-bottom: 0;
+	}
+	.check-courses,
+	.check-institutions,
+	.toggle-advanced-filters {
+		align-self: bottom;
+		overflow: hidden;
+		.btn.btn-primary {
+			background-color: rgba(darken($uc-blue, 7%), 1);
+			&:hover {
+				background-color: rgba(darken($uc-blue, 14%), 1);
+			}
+		}
+	}
+	.check-courses,
+	.check-institutions {
+		padding-left: 0;
+		label {
+			color: $white;
+			&:hover {
+				background-color: rgba($blue-dark, 0.42);
+			}
+		}
+	}
+	.toggle-advanced-filters {
+		.btn.btn.btn-primary {
+			background-image: url('../img/icon-chevron-down.svg');
+			background-repeat: no-repeat;
+			background-position: right $input-btn-padding-x center;
+			padding-right: ($input-btn-padding-x * 2.25);
+		}
+	}
+	.submit-search {
+		width: min-content;
+		align-self: center;
+		justify-self: right;
+		background-color: $uc-blue;
+		padding: ($input-btn-padding-y-sm) ($input-btn-padding-x-sm);
+		margin-right: ($input-btn-padding-x / 2);
+	}
+	// Advanced Filters Pane
+	#search-advanced-filters {
+		position: absolute;
+		top: 100%;
+	}
 }
 
+#search-advanced-filters {
+	color: $white;
+	background-color: rgba(darken($uc-blue, 7%), 1);
+}

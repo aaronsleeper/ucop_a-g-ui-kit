@@ -1,44 +1,24 @@
 // Body
 html body {
-    display: flex;
-    width: 100vw;
-    min-height: 100vh;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-// Brand
-// Header Logo Lockup
-.brand {
-    display: grid;
-    grid-gap: $spacer / 2;
-    grid-template-rows: repeat(3, min-content);
-    padding: ($spacer*1.75) ($spacer*1.5);
-    @extend %f400;
-    background-color: rgba($blue-light, 0.21);
-    color: $white;
-    .title {
-        @extend %f800;
-        font-size: $font-size-base * 2;
-        text-transform: uppercase;
-        line-height: 1;
-        margin-bottom: 0.21em;
-        white-space: nowrap;
-    }
-    .credit {
-        font-size: $font-size-sm;
-        color: rgba($white, 0.84);
-    }
-}
-.partner-logos {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: min-content;
     align-items: center;
-    [src*='uc.svg'] {
-        width: 5.125rem;
+    align-content: space-between;
+    justify-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.search-widget {
+    margin-top: 30vh;
+    &.pin-to-top {
+        margin-top: 0;
     }
-    [src*='csu.svg'] {
-        width: 8.125rem;
-    }
+}
+
+footer {
+    align-self: end;
 }
