@@ -5506,6 +5506,32 @@ p .btn {
 .svg-check input[type="checkbox"] {
   display: none; }
 
+.svg-check label {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  -webkit-box-align: middle;
+  -ms-flex-align: middle;
+  align-items: middle;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  line-height: 1.42;
+  -webkit-transition-property: background-color, var(--gold-light);
+  transition-property: background-color, var(--gold-light);
+  will-change: background-color, var(--gold-light);
+  -webkit-transition-duration: 0.195s;
+  transition-duration: 0.195s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  .svg-check label svg {
+    width: 1.5em; }
+  .svg-check label:hover {
+    -webkit-transition-duration: 0.225s;
+    transition-duration: 0.225s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
+
 .search-widget {
   position: relative;
   top: 30vh;
@@ -5525,10 +5551,12 @@ p .btn {
   .search-widget .search > form {
     position: relative;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(3, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content);
     grid-template-areas: "lead lead lead" "input input input" "courses institutions advanced";
-    padding: 2rem 1.5rem; }
+    padding: 0 1.5rem; }
   .search-widget .input-lead {
     grid-area: lead; }
   .search-widget .search-input {
@@ -5545,9 +5573,12 @@ p .btn {
     color: #FFFFFF; }
   .search-widget .search-input {
     margin-bottom: 0; }
-  .search-widget .check-courses label:hover,
-  .search-widget .check-institutions label:hover {
-    --gold-light: var(--gold-lighter); }
+  .search-widget .check-courses label,
+  .search-widget .check-institutions label {
+    color: #FFFFFF; }
+    .search-widget .check-courses label:hover,
+    .search-widget .check-institutions label:hover {
+      background-color: rgba(0, 85, 129, 0.42); }
   .search-widget .submit-search {
     width: -webkit-min-content;
     width: -moz-min-content;
@@ -5582,28 +5613,40 @@ body {
   position: relative;
   background-image: linear-gradient(30deg, #FFE552, #1295D8);
   background-attachment: fixed; }
-  body:before, body:after {
-    content: '';
-    position: absolute;
-    top: var(--rtop);
-    left: var(--rleft);
-    display: block;
-    width: var(--rw);
-    height: var(--rh);
-    background-color: transparent;
-    background-repeat: repeat;
-    background-size: auto;
-    -webkit-transform: rotate(var(--rot));
-    transform: rotate(var(--rot));
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    z-index: 0; }
-  body:before {
-    background-image: url("../img/bg-gradient-line.svg"); }
-  body:after {
-    background-image: url("../img/bg-rectangles.svg"); }
   body > * {
     z-index: 1; }
+  body .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; }
+    body .bg:before, body .bg:after {
+      content: '';
+      position: absolute;
+      top: var(--rtop);
+      left: var(--rleft);
+      display: block;
+      width: var(--rw);
+      height: var(--rh);
+      background-color: transparent;
+      background-repeat: repeat;
+      background-size: auto;
+      -webkit-transform: rotate(var(--rot));
+      transform: rotate(var(--rot));
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      z-index: 0; }
+    body .bg:before {
+      background-image: url("../img/bg-gradient-line.svg");
+      background-size: 16px 100%;
+      opacity: 0.42; }
+    body .bg:after {
+      background-image: url("../img/bg-rectangles.svg");
+      background-size: 1066px auto; }
 
 svg.defs-only {
   display: block;
