@@ -14070,7 +14070,7 @@ function sizeBackground() {
     // calculate the size of our rectangle
     var rw = (vh*Math.sin(angleOfRotation)) + (vw*Math.cos(angleOfRotation));
     var rh = (vw*Math.sin(angleOfRotation)) + (vh*Math.cos(angleOfRotation));
-    console.log('vw: ' + vw, 'vh: ' + vh, 'rw: ' + Math.round(rw), 'rh: ' + Math.round(rh), 'rot: ' + rot);
+    // console.log('vw: ' + vw, 'vh: ' + vh, 'rw: ' + Math.round(rw), 'rh: ' + Math.round(rh), 'rot: ' + rot);
 
     // set the values to custom props on the body
     document.body.style.setProperty('--vw', vw + 'px');

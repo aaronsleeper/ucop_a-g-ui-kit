@@ -5510,11 +5510,6 @@ p .btn {
   display: inline;
   padding: 0.15em 0.5em; }
 
-.svg-check input[type="checkbox"] {
-  display: none; }
-  .svg-check input[type="checkbox"]:checked + label {
-    background-color: rgba(0, 85, 129, 0.42); }
-
 .svg-check label {
   display: grid;
   grid-gap: 0.5rem;
@@ -5534,90 +5529,26 @@ p .btn {
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
   .svg-check label svg {
-    width: 1.5em; }
+    width: 1.5em;
+    opacity: 1; }
   .svg-check label:hover {
     -webkit-transition-duration: 0.225s;
     transition-duration: 0.225s;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
-.search-widget {
-  position: relative;
-  top: 30vh;
-  display: grid;
-  grid-template-columns: repeat(2, -webkit-max-content);
-  grid-template-columns: repeat(2, max-content);
-  background-color: #1295D8;
-  -webkit-transition-property: top;
-  transition-property: top;
-  will-change: top;
-  -webkit-transition-duration: 0.195s;
-  transition-duration: 0.195s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
-  .search-widget.pinned {
-    top: 0; }
-  .search-widget .search > form {
-    position: relative;
-    display: grid;
-    grid-template-rows: repeat(3, -webkit-min-content);
-    grid-template-rows: repeat(3, min-content);
-    grid-template-columns: repeat(3, -webkit-min-content);
-    grid-template-columns: repeat(3, min-content);
-    grid-template-areas: "lead lead lead" "input input input" "courses institutions advanced";
-    padding: 0 1.5rem; }
-  .search-widget .input-lead {
-    grid-area: lead; }
-  .search-widget .search-input {
-    grid-area: input; }
-  .search-widget .check-courses {
-    grid-area: courses; }
-  .search-widget .check-institutions {
-    grid-area: institutions; }
-  .search-widget .toggle-advanced-filters {
-    grid-area: advanced; }
-  .search-widget .submit-search {
-    grid-area: input; }
-  .search-widget .input-lead {
-    color: #FFFFFF; }
-  .search-widget .search-input {
-    margin-bottom: 0; }
-  .search-widget .check-courses label,
-  .search-widget .check-institutions label {
-    color: #FFFFFF; }
-    .search-widget .check-courses label:hover,
-    .search-widget .check-institutions label:hover {
-      background-color: rgba(0, 85, 129, 0.42); }
-  .search-widget .submit-search {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    -ms-flex-item-align: center;
-    align-self: center;
-    justify-self: right; }
-  .search-widget #search-advanced-filters {
-    position: absolute;
-    top: 100%; }
-
-html body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  min-height: 100vh;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+.svg-check input[type="checkbox"] {
+  display: none; }
+  .svg-check input[type="checkbox"]:checked + label svg {
+    opacity: 0.21;
+    --gold-light: var(--blue-dark); }
 
 .brand {
   display: grid;
   grid-gap: 0.5rem;
   grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
-  padding: 1.75rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   background-color: rgba(114, 205, 244, 0.21);
   color: #FFFFFF; }
   .brand .title {
@@ -5642,6 +5573,126 @@ html body {
     width: 5.125rem; }
   .partner-logos [src*='csu.svg'] {
     width: 8.125rem; }
+
+.search-widget {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  background-color: #1295D8;
+  -webkit-transition-property: top;
+  transition-property: top;
+  will-change: top;
+  -webkit-transition-duration: 0.195s;
+  transition-duration: 0.195s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  .search-widget .search > form {
+    position: relative;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-rows: repeat(2, -webkit-min-content), 1fr;
+    grid-template-rows: repeat(2, min-content), 1fr;
+    grid-template-columns: repeat(3, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content);
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    grid-template-areas: "lead lead lead" "input input input" "courses institutions advanced";
+    padding: 0 1.5rem; }
+  .search-widget .input-lead {
+    grid-area: lead; }
+  .search-widget .search-input {
+    grid-area: input; }
+  .search-widget .check-courses {
+    grid-area: courses; }
+  .search-widget .check-institutions {
+    grid-area: institutions; }
+  .search-widget .toggle-advanced-filters {
+    grid-area: advanced; }
+  .search-widget .submit-search {
+    grid-area: input; }
+  .search-widget .input-lead {
+    color: #FFFFFF;
+    padding-top: 1.5rem; }
+  .search-widget .search-input {
+    margin-bottom: 0; }
+  .search-widget .check-courses,
+  .search-widget .check-institutions,
+  .search-widget .toggle-advanced-filters {
+    -ms-flex-item-align: bottom;
+    align-self: bottom;
+    overflow: hidden; }
+    .search-widget .check-courses .btn.btn-primary,
+    .search-widget .check-institutions .btn.btn-primary,
+    .search-widget .toggle-advanced-filters .btn.btn-primary {
+      background-color: #0f7eb7; }
+      .search-widget .check-courses .btn.btn-primary:hover,
+      .search-widget .check-institutions .btn.btn-primary:hover,
+      .search-widget .toggle-advanced-filters .btn.btn-primary:hover {
+        background-color: #0d6896; }
+  .search-widget .check-courses,
+  .search-widget .check-institutions {
+    padding-left: 0; }
+    .search-widget .check-courses label,
+    .search-widget .check-institutions label {
+      color: #FFFFFF; }
+      .search-widget .check-courses label:hover,
+      .search-widget .check-institutions label:hover {
+        background-color: rgba(0, 85, 129, 0.42); }
+  .search-widget .toggle-advanced-filters .btn.btn.btn-primary {
+    background-image: url("../img/icon-chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.25rem; }
+  .search-widget .submit-search {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: right;
+    background-color: #1295D8;
+    padding: 0.375rem 0.5rem;
+    margin-right: 0.5rem; }
+  .search-widget #search-advanced-filters {
+    position: absolute;
+    top: 100%; }
+
+#search-advanced-filters {
+  color: #FFFFFF;
+  background-color: #0f7eb7; }
+
+footer {
+  font-size: 0.875rem;
+  color: #7C7E7F; }
+
+html body {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: repeat(2, -webkit-min-content);
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: -webkit-min-content;
+  grid-template-columns: min-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  justify-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh; }
+
+.search-widget {
+  margin-top: 30vh; }
+  .search-widget.pin-to-top {
+    margin-top: 0; }
+
+footer {
+  -ms-flex-item-align: end;
+  align-self: end; }
 
 body {
   position: relative;
