@@ -66,6 +66,7 @@ gulp.task('pack-js', function () {
       .src([
         "app/scripts/tooltips.js",
         "app/scripts/loader.js",
+        "app/scripts/lottie-animations.js",
         "app/scripts/scripts.js"
       ])
       .pipe(concat("app.js"))

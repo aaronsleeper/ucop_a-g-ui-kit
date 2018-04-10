@@ -14046,6 +14046,7 @@ for (var i = 0; i < loader.length; i++) {
         path: 'animations/loader.json'
     })
 }
+
 /* ------------------------------
 
 Equations being used are from the link below

@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "jquery": "^3.2.1",
-    "lottie-web": "^5.1.1",
+    "lottie-web": "^5.1.10",
     "popper.js": "^1.12.9"
   },
   "devDependencies": {

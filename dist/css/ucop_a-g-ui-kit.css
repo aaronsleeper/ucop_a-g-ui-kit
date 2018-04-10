@@ -75,16 +75,23 @@
 /****************************************
     Utilize Fonts
 *****************************************/
+.brand {
+  font-family: "KievitProBook"; }
+  .brand em {
+    font-family: "KievitProBookItalic"; }
+  .brand strong {
+    font-family: "KievitProMedium"; }
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .search-widget .input-lead, .h5,
-h6, .h6 {
+h6, .h6, .brand .title {
   font-family: "KievitProExtraBold"; }
-  h1 em, .h1 em, h2 em, .h2 em, h3 em, .h3 em, h4 em, .h4 em, h5 em, .search-widget .input-lead em, .h5 em, h6 em, .h6 em {
+  h1 em, .h1 em, h2 em, .h2 em, h3 em, .h3 em, h4 em, .h4 em, h5 em, .search-widget .input-lead em, .h5 em, h6 em, .h6 em, .brand .title em {
     font-family: "KievitProExtraBoldItalic"; }
-  h1 strong, .h1 strong, h2 strong, .h2 strong, h3 strong, .h3 strong, h4 strong, .h4 strong, h5 strong, .search-widget .input-lead strong, .h5 strong, h6 strong, .h6 strong {
+  h1 strong, .h1 strong, h2 strong, .h2 strong, h3 strong, .h3 strong, h4 strong, .h4 strong, h5 strong, .search-widget .input-lead strong, .h5 strong, h6 strong, .h6 strong, .brand .title strong {
     font-family: "KievitProBlack"; }
 
 /* ------------------------------ 
@@ -5505,6 +5512,8 @@ p .btn {
 
 .svg-check input[type="checkbox"] {
   display: none; }
+  .svg-check input[type="checkbox"]:checked + label {
+    background-color: rgba(0, 85, 129, 0.42); }
 
 .svg-check label {
   display: grid;
@@ -5604,10 +5613,35 @@ html body {
   justify-content: center; }
 
 .brand {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
+  padding: 1.75rem 1.5rem;
   background-color: rgba(114, 205, 244, 0.21);
   color: #FFFFFF; }
-  .brand > span {
-    display: block; }
+  .brand .title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.21em;
+    white-space: nowrap; }
+  .brand .credit {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.84); }
+
+.partner-logos {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, -webkit-min-content);
+  grid-template-columns: repeat(2, min-content);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .partner-logos [src*='uc.svg'] {
+    width: 5.125rem; }
+  .partner-logos [src*='csu.svg'] {
+    width: 8.125rem; }
 
 body {
   position: relative;

@@ -1,6 +1,9 @@
 .svg-check {
     input[type="checkbox"] {
         display: none;
+        &:checked + label {
+            background-color: rgba($blue-dark, 0.42);
+        }
     }
     label {
         display: grid;
