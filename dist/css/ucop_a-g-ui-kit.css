@@ -5707,6 +5707,9 @@ body {
     display: block;
     width: 100vw;
     height: 100vh;
+    background-image: url("../img/let-there-be-light.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 2rem right 2rem;
     overflow: hidden;
     z-index: 0; }
     body .bg:before, body .bg:after {
