@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
+var cssSvg = require('gulp-css-svg');
 
 // destOption - required var for multiDest
 // https://www.npmjs.com/package/gulp-multi-dest
@@ -97,6 +98,7 @@ gulp.task('dist-css', ['clean', 'sass'], function() {
     return (gulp
         .src("app/css/app.css")
         .pipe(rename('ucop_a-g-ui-kit.css'))
+        .pipe(cssSvg())
         .pipe(multiDest(["dist/css"]))
     );
 });
