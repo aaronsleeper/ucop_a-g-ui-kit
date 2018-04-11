@@ -7,12 +7,15 @@
 		cursor: pointer;
 		padding: $input-btn-padding-y $input-btn-padding-x;
 		line-height: $input-btn-line-height;
-		@include transition-property(background-color, var(--gold-light));
+		@include transition-property(background-color);
 		@include transition-duration($duration-exit);
 		@include transition-easing($easing-decel);
 		svg {
 			width: 1.5em;
-			opacity: 1;
+			color: rgba($blue-dark, 0.21);
+			@include transition-property(color);
+			@include transition-duration($duration-exit);
+			@include transition-easing($easing-decel);
 		}
 		&:hover {
 			@include transition-duration($duration-entry);
@@ -23,8 +26,7 @@
 		display: none;
 		&:checked + label {
 			svg {
-				opacity: 0.21;
-				--gold-light: var(--blue-dark);
+				color: rgba($gold-light, 1);
 			}
 		}
 	}

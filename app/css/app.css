@@ -5521,16 +5521,23 @@ p .btn {
   cursor: pointer;
   padding: 0.75rem 1rem;
   line-height: 1.42;
-  -webkit-transition-property: background-color, var(--gold-light);
-  transition-property: background-color, var(--gold-light);
-  will-change: background-color, var(--gold-light);
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  will-change: background-color;
   -webkit-transition-duration: 0.195s;
   transition-duration: 0.195s;
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
   .svg-check label svg {
     width: 1.5em;
-    opacity: 1; }
+    color: rgba(0, 85, 129, 0.21);
+    -webkit-transition-property: color;
+    transition-property: color;
+    will-change: color;
+    -webkit-transition-duration: 0.195s;
+    transition-duration: 0.195s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
   .svg-check label:hover {
     -webkit-transition-duration: 0.225s;
     transition-duration: 0.225s;
@@ -5540,8 +5547,7 @@ p .btn {
 .svg-check input[type="checkbox"] {
   display: none; }
   .svg-check input[type="checkbox"]:checked + label svg {
-    opacity: 0.21;
-    --gold-light: var(--blue-dark); }
+    color: #ffd200; }
 
 .brand {
   display: grid;
