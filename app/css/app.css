@@ -4319,7 +4319,7 @@ button.bg-dark:focus {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0,
+.mb-0, footer p,
 .my-0 {
   margin-bottom: 0 !important; }
 
@@ -5676,6 +5676,19 @@ p .btn {
     padding: 3rem 2rem; }
 
 footer {
+  display: grid;
+  grid-gap: 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  margin-bottom: 1rem;
   font-size: 0.875rem;
   color: #7C7E7F;
   text-align: center; }
