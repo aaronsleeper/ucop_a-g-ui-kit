@@ -1,0 +1,7 @@
+#search-advanced-filters {
+	color: $white;
+	background-color: rgba(darken($uc-blue, 7%), 1);
+	.filter-list {
+		padding: $pane-padding-y $pane-padding-x;
+	}
+}

@@ -2,6 +2,7 @@
 .search-widget {
 	position: relative;
 	display: grid;
+	width: min-content;
 	grid-template-columns: repeat(2, max-content);
 	background-color: $uc-blue;
 	@include transition-property(top);
@@ -87,14 +88,4 @@
 		padding: ($input-btn-padding-y-sm) ($input-btn-padding-x-sm);
 		margin-right: ($input-btn-padding-x / 2);
 	}
-	// Advanced Filters Pane
-	#search-advanced-filters {
-		position: absolute;
-		top: 100%;
-	}
-}
-
-#search-advanced-filters {
-	color: $white;
-	background-color: rgba(darken($uc-blue, 7%), 1);
 }

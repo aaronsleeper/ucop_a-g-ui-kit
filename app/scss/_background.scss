@@ -4,11 +4,11 @@ body {
 	background-attachment: fixed;
 	// pull the immediate children up above the background layering
 	> * {
-		//position: relative;
+		position: relative;
 		z-index: $z-index-body-immediate-children;
 	}
 	.bg {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		display: block;

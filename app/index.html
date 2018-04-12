@@ -19,52 +19,65 @@
     </svg>
 
     <!-- Start Main Page Layout -->
-    <!-- Search Widget -->
-    <div class="search-widget">
-        <div class="brand">
-            <span class="title">A-G Course List</span>
-            <span class="credit">Brought to you by</span>
-            <span class="partner-logos">
-                <img src="img/logo - uc.svg" alt="University of California">
-                <img src="img/logo - csu.svg" alt="California State University">
-            </span>
-        </div>
-        <div class="search">
-            <form>
-                <span class="input-lead">What can we help you find?</span>
-                <div class="form-group search-input">
-                    <label id="search-input-label" for="search-input" class="sr-only">Search for courses or institutions</label>
-                    <input type="text" class="form-control" id="search-input" aria-describedby="search-input-label" placeholder="Start typing" />
-                </div>
-                <div class="form-check svg-check check-courses">
-                    <input class="form-check-input" type="checkbox" value="" id="search-check-courses">
-                    <label class="form-check-label" for="search-check-courses">
-                        <svg viewBox="0 0 20 20" class="icon-check-circle"><use xlink:href="#icon-check-circle" /></svg>
-                        Courses
-                    </label>
-                </div>
-                <div class="form-check svg-check check-institutions">
-                    <input class="form-check-input" type="checkbox" value="" id="search-check-institutions">
-                    <label class="form-check-label" for="search-check-institutions">
-                        <svg viewBox="0 0 20 20" class="icon-check-circle"><use xlink:href="#icon-check-circle" /></svg>
-                        Institutions
-                    </label>
-                </div>
-                <div class="toggle-advanced-filters">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#search-advanced-filters" role="button" aria-expanded="false" aria-controls="search-advanced-filters">
-                        Advanced
-                    </a>
-                </div>
-                <div class="collapse" id="search-advanced-filters">
-                    <div class="filter-list">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
-                        craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    <div class="content">
+        <!-- Search Widget -->
+        <div class="search-widget">
+            <div class="brand">
+                <span class="title">A-G Course List</span>
+                <span class="credit">Brought to you by</span>
+                <span class="partner-logos">
+                    <img src="img/logo - uc.svg" alt="University of California">
+                    <img src="img/logo - csu.svg" alt="California State University">
+                </span>
+            </div>
+            <div class="search">
+                <form>
+                    <span class="input-lead">What can we help you find?</span>
+                    <div class="form-group search-input">
+                        <label id="search-input-label" for="search-input" class="sr-only">Search for courses or institutions</label>
+                        <input type="text" class="form-control" id="search-input" aria-describedby="search-input-label" placeholder="Start typing" />
                     </div>
-                </div>
-                <button type="submit" class="btn btn-primary submit-search"><span class="sr-only">Search</span><img src="img/icon-search.svg" alt="Search"></button>
-            </form>
+                    <div class="form-check svg-check check-courses">
+                        <input class="form-check-input" type="checkbox" value="" id="search-check-courses">
+                        <label class="form-check-label" for="search-check-courses">
+                            <svg viewBox="0 0 20 20" class="icon-check-circle"><use xlink:href="#icon-check-circle" /></svg>
+                            Courses
+                        </label>
+                    </div>
+                    <div class="form-check svg-check check-institutions">
+                        <input class="form-check-input" type="checkbox" value="" id="search-check-institutions">
+                        <label class="form-check-label" for="search-check-institutions">
+                            <svg viewBox="0 0 20 20" class="icon-check-circle"><use xlink:href="#icon-check-circle" /></svg>
+                            Institutions
+                        </label>
+                    </div>
+                    <div class="toggle-advanced-filters">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#search-advanced-filters" role="button" aria-expanded="false" aria-controls="search-advanced-filters">
+                            Advanced
+                        </a>
+                    </div>
+                        <button type="submit" class="btn btn-primary submit-search"><span class="sr-only">Search</span><img src="img/icon-search.svg" alt="Search"></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Advanced Filters -->
+        <div class="collapse" id="search-advanced-filters">
+            <div class="filter-list">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+                craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+
+        <!-- Search Results -->
+        <div id="search-results">
+            <div class="inner">
+                Search Results
+            </div>
         </div>
     </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2018 Regents of the University of California</p>
     </footer>

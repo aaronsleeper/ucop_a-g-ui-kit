@@ -1,24 +1,23 @@
 // Body
 html body {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-columns: min-content;
-    align-items: center;
-    align-content: space-between;
-    justify-items: center;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
+	position: relative;
+	display: grid;
+	grid-gap: 0;
+	grid-template-rows: 1fr min-content;
+	justify-content: center;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .search-widget {
-    margin-top: 30vh;
-    &.pin-to-top {
-        margin-top: 0;
-    }
-}
-
-footer {
-    align-self: end;
+	&.pin-to-top {
+		margin-top: 0;
+	}
 }
