@@ -15,7 +15,7 @@
 		display: grid;
 		grid-gap: $spacer / 2;
 		grid-template-rows: repeat(2, min-content), 1fr;
-		grid-template-columns: repeat(3, min-content);
+		grid-template-columns: repeat(3, max-content);
 		align-content: space-between;
 		grid-template-areas: "lead lead lead" "input input input"
 			"courses institutions advanced";
@@ -73,7 +73,7 @@
 		}
 	}
 	.toggle-advanced-filters {
-		.btn.btn.btn-primary {
+		.btn.btn-primary {
 			background-image: url('../img/icon-chevron-down.svg');
 			background-repeat: no-repeat;
 			background-position: right $input-btn-padding-x center;

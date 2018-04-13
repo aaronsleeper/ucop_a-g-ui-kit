@@ -16,6 +16,9 @@
                 <path fill="currentColor" fill-rule="nonzero" d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zM8 15l-5-5 1.41-1.41L8 12.17l7.59-7.59L17 6l-9 9z" />
             </g>
         </symbol>
+        <symbol viewBox="0 0 14 17" id="icon-question">
+            <path fill="currentColor" d="M14.25,1.5 L3.75,1.5 C2.9175,1.5 2.25,2.175 2.25,3 L2.25,13.5 C2.25,14.325 2.9175,15 3.75,15 L6.75,15 L9,17.25 L11.25,15 L14.25,15 C15.075,15 15.75,14.325 15.75,13.5 L15.75,3 C15.75,2.175 15.075,1.5 14.25,1.5 Z M9.75,13.5 L8.25,13.5 L8.25,12 L9.75,12 L9.75,13.5 Z M11.3025,7.6875 L10.6275,8.3775 C10.0875,8.925 9.75,9.375 9.75,10.5 L8.25,10.5 L8.25,10.125 C8.25,9.3 8.5875,8.55 9.1275,8.0025 L10.0575,7.0575 C10.335,6.7875 10.5,6.4125 10.5,6 C10.5,5.175 9.825,4.5 9,4.5 C8.175,4.5 7.5,5.175 7.5,6 L6,6 C6,4.3425 7.3425,3 9,3 C10.6575,3 12,4.3425 12,6 C12,6.66 11.73,7.26 11.3025,7.6875 Z" transform="translate(-2 -1)"/>
+        </symbol>
     </svg>
 
     <!-- Start Main Page Layout -->
@@ -80,7 +83,10 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2018 Regents of the University of California</p>
-        <a href="#" id="btn-help" class="btn btn-primary btn-sm">Help</a>
+        <a href="#" id="btn-help">
+            <svg viewBox="0 0 14 17" class="icon-question"><use xlink:href="#icon-question" /></svg>
+            Help
+        </a>
     </footer>
     <div class="bg"></div>
 

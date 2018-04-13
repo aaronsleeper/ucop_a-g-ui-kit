@@ -1,15 +1,13 @@
 footer {
-	display: grid;
-	grid-gap: $spacer;
+	display: flex;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	grid-template-columns: repeat(2, max-content);
 	margin-bottom: $spacer;
 	font-size: $font-size-sm;
 	color: $uc-gray;
 	text-align: center;
 	p {
-		@extend .mb-0;
+		@extend .mb-0, .mr-1;
 	}
 }

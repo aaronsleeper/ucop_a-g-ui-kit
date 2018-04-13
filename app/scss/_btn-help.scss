@@ -1,2 +1,6 @@
 #btn-help {
+	@extend .btn, .btn-primary, .btn-sm;
+	svg {
+		color: $gold-light;
+	}
 }

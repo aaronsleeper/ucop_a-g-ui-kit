@@ -1,45 +1,31 @@
 // Set cursor for button element
 button:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 // Turn off border colors
 .btn {
-    &.btn-primary,
-    &.btn-default {
-        border-color: transparent;
-    }
+	&.btn-primary,
+	&.btn-default {
+		border-color: transparent;
+	}
 }
 
 // Buttons with icons
-// Icons should always appear before text in a button
 .btn {
-    display        : flex;
-    align-items    : center;
-    justify-content: flex-start;
-    svg[class*="icon-"] {
-        @include transition-property(height);
-        @include transition-duration($duration-exit);
-        @include transition-easing($easing-decel);
-        transform-origin: 50% 50%;
-    }
-    &:hover,
-    &:focus {
-        svg[class*="icon-"] {
-            height: 1em;
-            @include transition-duration($duration-entry);
-            @include transition-easing($easing-accel);
-        }
-    }
-}
-.btn-sm {
-    border-radius: $border-radius;
+	display: grid;
+	grid-gap: ($spacer / 4);
+	grid-template-columns: repeat(2, auto);
+	align-items: center;
+	justify-content: space-between;
+	svg {
+		width: 1em;
+	}
 }
 .img-btn {
-    padding: 0;
+	padding: 0;
 }
 p .btn {
-    display: inline;
-    padding: 0.15em 0.5em;
+	display: inline;
+	padding: 0.15em 0.5em;
 }
-
