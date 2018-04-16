@@ -111,4 +111,11 @@ gulp.task('dist-svg', ['clean'], function() {
     );
 });
 
-gulp.task('build', ['dist-css', 'dist-js', 'dist-svg']);
+gulp.task('dist-fonts', ['clean'], function() {
+    return (gulp
+        .src("app/fonts/*")
+        .pipe(multiDest(["dist/fonts"]))
+    );
+});
+
+gulp.task('build', ['dist-css', 'dist-js', 'dist-svg', 'dist-fonts']);
